@@ -15,7 +15,8 @@ layout: default
 {% if forloop.first or post.summery == null %}
 {{ post.content }}
 {% else %}
-{{ post.summary }}
+{{ post.summary }} 
+<p><a href="{{ post.url }}" rel="bookmark" title="link to this post">Read this post in its entirety&hellip;</p>
 {% endif %}
 
   </article> 
