@@ -12,11 +12,11 @@ layout: default
       <hgroup>
     </header> 
 
-{% if forloop.first or post.summery == null %}
+{% if forloop.first or post.summary == null %}
 {{ post.content }}
 {% else %}
 {{ post.summary }} 
-<p><a href="{{ post.url }}" rel="bookmark" title="link to this post">Read this post in its entirety&hellip;</p>
+<p><a href="{{ post.url }}" rel="bookmark" title="link to this post">Read this post in its entirety&hellip;</a></p>
 {% endif %}
 
   </article> 
