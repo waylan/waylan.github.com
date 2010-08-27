@@ -1,69 +1,18 @@
-<!DOCTYPE html> 
-<html lang="en"> 
- 
-<head> 
-  <meta charset="utf-8" /> 
-  <title>achinghead.com</title> 
-  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--> 
-  <link rel="stylesheet" href="/media/style.css" /> 
-  <link rel="alternate" type="application/atom+xml" title="My Weblog feed" href="/feed/" /> 
-  <link rel="shortcut icon" href="/favicon.ico" /> 
-</head> 
- 
-<body> 
- 
-  <header id='siteheader'> 
- 
-    <hgroup> 
-      <h1>achinghead.com</h1> 
-      <h2>about to explode with half-backed ideas</h2> 
-    </hgroup> 
- 
-    <nav> 
-      <ul> 
-        <li><a href="../">home</a></li> 
-        <li><a href="../archive.html">archive</a></li> 
-        <li><a href="../projects/">projects</a></li> 
-        <li><a href="../about.html">about</a></li> 
-      </ul> 
-    </nav> 
- 
-  </header> 
- 
+---
+layout: default
+---
+{% for post in site.posts limit:5 %}
   <article> 
     <header> 
       <hgroup>
         <h1> 
-          <a href="../foo.html" rel="bookmark" title="link to this post">Sometimes I Wonder</a> 
+          <a href="{{ post.url }}" rel="bookmark" title="link to this post">{{ post.title }}</a> 
         </h1> 
-        <h2>by Waylan Limberg <time datetime="2009-10-22" pubdate>April 1, 2010</time></h2>
+        <h2>by Waylan Limberg <time datetime="{{ post.date|date:"%Y-%m-%d" }}" pubdate>{{ post.date|date"%B %d, %Y" }}</time></h2>
       <hgroup>
     </header> 
  
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit felis accumsan turpis pretium tempor. Duis eu turpis nunc, ut euismod nisl. Aliquam erat volutpat. Proin eu eros mollis dui fringilla sodales. Curabitur venenatis tincidunt felis ac congue. Maecenas at odio dui, sit amet congue sapien. Proin placerat feugiat eros, non mollis quam pharetra at. Duis gravida eleifend ligula nec auctor. Fusce nulla diam, <a href="#">fringilla</a> non ultrices in, iaculis eu tellus. Sed mollis consequat turpis sit amet facilisis. Donec pretium luctus aliquet. Curabitur placerat varius purus vel congue. Aliquam erat volutpat. Curabitur vitae eros sed turpis sollicitudin mattis. Morbi venenatis pulvinar nunc, at vulputate massa placerat a. Nam et tortor id nisi consequat tempor eget sit amet risus. Praesent bibendum, velit eu hendrerit porttitor, elit mauris posuere nisl, non pellentesque est leo a quam.</p> 
- 
-  </article> 
- 
-  <article> 
-    <header>
-      <hgroup>
-        <h1> 
-          <a href="../semantics.html" rel="bookmark" title="link to this post">What am I Doing With This Here Site?</a> 
-        </h1> 
-        <h2>by Waylan Limberg <time datetime="2009-10-17" pubdate>March 31, 2010</time></h2>
-    </header> 
- 
-    <p>Sed ante mi, sagittis sed euismod sit amet, convallis et nibh. Etiam sit amet odio dui, id semper turpis. Mauris risus mauris, imperdiet pulvinar vehicula et, hendrerit vitae dui. Phasellus ultrices lacus rhoncus purus posuere rutrum. Maecenas mattis eleifend scelerisque. Nulla quam sem, facilisis ac ultrices et, tincidunt eu dolor. Mauris arcu est, porttitor eu blandit nec, pulvinar sed enim. Praesent diam felis, cursus at facilisis eu, mollis ut elit. Praesent rutrum porta euismod. Nulla facilisi. Suspendisse potenti. In auctor ultricies eleifend. Proin erat dolor, malesuada non tempus nec, tincidunt in mi.</p> 
- 
-  </article> 
- 
+{{ post.content }}
 
-  <footer> 
- 
- 
-    <p>&copy; 2010 <a href="../about.html">Waylan Limberg</a></p> 
- 
-  </footer> 
- 
-</body> 
-</html> 
+  </article> 
+{% endfor %}
