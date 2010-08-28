@@ -1,3 +1,9 @@
 auto: true
+markdown: rdiscount
 permalink: /:title.html
 paginate: 5
+exclude: 
+  README
+
+rdiscount:
+  extensions: [smart]
