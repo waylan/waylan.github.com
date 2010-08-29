@@ -1,6 +1,11 @@
 /* HTML5-specific CSS setup */
 article,aside,figure,footer,header,hgroup,nav,section{display:block}
 
+/* Embed fonts (only the weights and styles used) */
+@font-face {font-family:Fontin; font-weight:bold; src:url('/media/Fontin-Bold.otf');}
+@font-face {font-family:FontinSans; src:url('/media/Fontin_Sans_R_45b.otf')}
+@font-face {font-family:FontinSans; font-weight:bold; src:url('/media/Fontin_Sans_B_45b.otf');}
+
 /* Basic Page Layout */
 html {
     background:white;color:black
@@ -32,6 +37,7 @@ a:visited {
 
 /* Style the Site Header */
 #siteheader {
+    font-family:FontinSans;
     position:fixed;
     top:0;
     left:0;
@@ -63,6 +69,7 @@ a:visited {
 #siteheader li {
     display:inline;
     margin-right: 1em;
+    margin-top: 1em;
 }
 
 #siteheader a {
@@ -77,12 +84,14 @@ article header time {
 article header h1 {
     text-align:center;
     margin-bottom: 0.25em;
+    font-family:Fontin;
     font-size:big;
 }
 
 article header h2 {
     text-align:center;
     margin:0;
+    font-family:FontinSans;
     font-size:medium;
 }
 
@@ -101,5 +110,6 @@ article p{
 
 /* Style the Site Footer */
 footer p {
+    font-family:FontinSans;
     text-align:center;
 }
