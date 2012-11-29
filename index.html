@@ -1,23 +1,69 @@
----
-layout: default
----
-{% for post in site.posts limit:5 %}
-  <article> 
-    <header> 
-      <hgroup>
-        <h1> 
-          <a href="{{ post.url }}" rel="bookmark" title="link to this post">{{ post.title }}</a> 
-        </h1> 
-        <h2>by Waylan Limberg <time datetime="{{ post.date|date:"%Y-%m-%d" }}" pubdate>{{ post.date|date:"%B %d, %Y" }}</time></h2>
-      <hgroup>
-    </header> 
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Waylan Limberg's homepage by waylan</title>
 
-{% if forloop.first or post.summary == null %}
-{{ post.content }}
-{% else %}
-{{ post.summary }} 
-<p><a href="{{ post.url }}" rel="bookmark" title="link to this post">Read this post in its entirety&hellip;</a></p>
-{% endif %}
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Waylan Limberg's homepage</h1>
+        <p class="header"></p>
 
-  </article> 
-{% endfor %}
+
+
+        <ul>
+          <li><a class="buttons github" href="https://github.com/waylan">GitHub Profile</a></li>
+        </ul>
+
+      </header>
+      <section>
+        <h3>Links:</h3>
+
+<h4>Sites and Projects:</h4>
+
+<ul>
+<li><a href="http://achinghead.com">Technical blog</a></li>
+<li><a href="https://github.com/waylan">Coding Projects</a></li>
+</ul><h4>Interests:</h4>
+
+<ul>
+<li><a href="http://delicious.com/waylan">Delicious Bookmarks</a></li>
+<li><a href="http://pinterest.com/waylanl/">Pinterest Photos</a></li>
+<li><a href="http://www.flickr.com/people/waylan/">Flickr Photos</a></li>
+</ul><h4>Resume:</h4>
+
+<ul>
+<li><a href="https://www.dropbox.com/s/tbtzza6sd1m2bjb/Waylan_Limberg.txt">Plain Text (.txt)</a></li>
+<li><a href="https://www.dropbox.com/s/u5gqsf4ug8ji1bm/Waylan_Limberg.pdf">PDF</a></li>
+<li><a href="https://www.dropbox.com/s/1axruxcqfj39kk3/Waylan_Limberg.doc">Word Document</a></li>
+<li><a href="https://www.dropbox.com/s/ygze30xx2t11514/cv.txt">CV</a></li>
+</ul>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-36689059-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
